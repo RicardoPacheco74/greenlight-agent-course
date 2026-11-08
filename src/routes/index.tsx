@@ -14,17 +14,16 @@ import { Projects } from "@/components/landing/Projects";
 import { Testimonials } from "@/components/landing/Testimonials";
 import { WhyNow } from "@/components/landing/WhyNow";
 import logoAcademia from "@/assets/logo-academia-transparente.png.asset.json";
-import ogImage from "@/assets/og-curso-n8n.jpg.asset.json";
 import { FAQ, MODULES, OFFER } from "@/data/course";
 
-const SITE_URL = "https://curso-n8n.academiadanuvem.cloud";
-const COURSE_NAME = "n8n do Zero ao Profissional - Automações e Agentes de IA";
-const TITLE = "Curso de n8n do Zero ao Profissional | Agentes de IA e Automação";
+const SITE_URL = "https://curso-lovable.academiadanuvem.cloud";
+const COURSE_NAME = "Desenvolvimento com IA: Lovable + n8n + Supabase";
+const TITLE = "Curso Desenvolvimento com IA: Lovable + n8n + Supabase | Academia da Nuvem";
 const DESCRIPTION =
-  "Aprenda n8n do zero ao profissional e crie automações, agentes de IA, RAG, multiagentes, MCP e integrações com APIs, WhatsApp, Supabase e Docker.";
+  "Aprenda a construir interfaces profissionais, conectar bancos de dados, integrar APIs, automatizar processos e desenvolver aplicações completas utilizando inteligência artificial com Lovable, n8n e Supabase.";
 const SOCIAL_DESCRIPTION =
-  "Curso de n8n do zero ao profissional: automações, agentes de IA, RAG, multiagentes, MCP e integrações reais com APIs, WhatsApp e Docker.";
-const OG_IMAGE = `${SITE_URL}${ogImage.url}`;
+  "Formação prática de desenvolvimento com IA: Lovable, n8n, Supabase, Engenharia de Prompt, RAG e 7 projetos reais para o seu portfólio.";
+const OG_IMAGE = `${SITE_URL}/imagem-curso-lovable.png`;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -38,11 +37,11 @@ export const Route = createFileRoute("/")({
       { property: "og:site_name", content: "Academia da Nuvem" },
       { property: "og:locale", content: "pt_BR" },
       { property: "og:image", content: OG_IMAGE },
-      { property: "og:image:width", content: "1280" },
-      { property: "og:image:height", content: "1280" },
+      { property: "og:image:width", content: "1502" },
+      { property: "og:image:height", content: "845" },
       {
         property: "og:image:alt",
-        content: "Curso de n8n com automações e agentes de inteligência artificial",
+        content: "Formação Desenvolvimento com IA: Lovable, n8n e Supabase",
       },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: TITLE },
@@ -64,18 +63,19 @@ export const Route = createFileRoute("/")({
           image: OG_IMAGE,
           educationalLevel: "Iniciante a avançado",
           about: [
+            "Lovable",
+            "Desenvolvimento com IA",
             "n8n",
-            "Automação de workflows",
-            "Inteligência artificial",
-            "Agentes de IA",
-            "LLMs",
-            "RAG",
-            "MCP",
-            "APIs e webhooks",
-            "WhatsApp",
             "Supabase",
             "PostgreSQL",
-            "Docker",
+            "Engenharia de Prompt",
+            "APIs e Webhooks",
+            "Design System",
+            "Tailwind CSS",
+            "shadcn/ui",
+            "OpenAI",
+            "RAG",
+            "Bases Vetoriais",
           ],
           teaches: MODULES.map((m) => m.title),
           author: { "@id": `${SITE_URL}/#organization` },
@@ -91,12 +91,12 @@ export const Route = createFileRoute("/")({
           hasCourseInstance: {
             "@type": "CourseInstance",
             courseMode: "online",
-            courseWorkload: "PT30H",
+            courseWorkload: "PT35H",
             inLanguage: "pt-BR",
           },
-          syllabusSections: MODULES.map((m, i) => ({
+          syllabusSections: MODULES.map((m) => ({
             "@type": "Syllabus",
-            position: i + 1,
+            position: m.number,
             name: m.title,
             description: m.tagline,
           })),

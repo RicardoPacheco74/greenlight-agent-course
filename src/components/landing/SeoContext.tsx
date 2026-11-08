@@ -2,29 +2,38 @@ import { Reveal, Section, SectionHeading } from "./primitives";
 
 const TOPICS = [
   {
-    title: "Lovable",
-    text: "O Lovable cria sites e aplicações a partir de prompts, com modos Plan e Build, histórico de versões, conectores, integração com GitHub e publicação com domínio personalizado.",
+    title: "Desenvolvimento com Lovable",
+    text: "O Lovable permite conceber, prototipar e programar aplicações modernas a partir de linguagem natural, com modos Plan e Build, versionamento no GitHub, suporte a Design System e publicação com domínio próprio.",
   },
   {
-    title: "Lovable Cloud e Supabase",
-    text: "A camada de dados das aplicações: tabelas, comandos SQL, segurança com RLS, Edge Functions para lógica no backend, autenticação e armazenamento.",
+    title: "Backend e Dados com Supabase",
+    text: "O Supabase e o Lovable Cloud fornecem a infraestrutura de dados da formação: bancos relacionais PostgreSQL, comandos SQL, controle de acesso granular via RLS (Row Level Security) e regras de negócio com Edge Functions.",
   },
   {
-    title: "n8n e inteligência artificial",
-    text: "O n8n recebe dados do Lovable por webhooks e executa fluxos com agentes de IA da OpenAI e base vetorial no Supabase, como no projeto ValidaLegal.",
+    title: "Automação e IA com n8n",
+    text: "O n8n conecta-se à aplicação por webhooks para processamento assíncrono de eventos, extração de documentos, chamadas a APIs de modelos da OpenAI e integração com bases vetoriais para buscas semânticas.",
   },
 ];
 
 export function SeoContext() {
   return (
     <Section id="conceitos" className="pb-16">
-      <SectionHeading eyebrow="Contexto" title="Entenda os conceitos do curso" />
+      <SectionHeading
+        eyebrow="Fundamentos da formação"
+        title="Arquitetura de desenvolvimento integrada"
+        description="A combinação das três tecnologias líderes do ecossistema moderno para acelerar a criação de produtos digitais."
+      />
       <Reveal delay={0.05} className="mt-10">
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-5 md:grid-cols-3">
           {TOPICS.map((t) => (
-            <article key={t.title} className="glass rounded-2xl p-6">
-              <h3 className="font-display text-lg font-light tracking-tight">{t.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t.text}</p>
+            <article
+              key={t.title}
+              className="glass rounded-2xl p-6 transition-all hover:border-lovable-pink/30"
+            >
+              <h3 className="font-display text-lg font-light tracking-tight text-foreground">
+                {t.title}
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-foreground-secondary">{t.text}</p>
             </article>
           ))}
         </div>

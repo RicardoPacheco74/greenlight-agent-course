@@ -79,13 +79,22 @@ export function Section({
   className?: string;
 }) {
   return (
-    <section id={id} className={cn("relative mx-auto w-full max-w-7xl px-6 py-24 md:py-32", className)}>
+    <section
+      id={id}
+      className={cn("relative mx-auto w-full max-w-7xl px-6 py-24 md:py-32", className)}
+    >
       {children}
     </section>
   );
 }
 
-export function Eyebrow({ children, icon: Icon = Sparkles }: { children: ReactNode; icon?: LucideIcon }) {
+export function Eyebrow({
+  children,
+  icon: Icon = Sparkles,
+}: {
+  children: ReactNode;
+  icon?: LucideIcon;
+}) {
   return (
     <span className="glass inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-xs tracking-wide text-muted-foreground">
       <Icon className="h-3.5 w-3.5 text-neon" />

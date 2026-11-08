@@ -4,20 +4,20 @@
 
 1. **Currículo real (12 capítulos, 151 aulas)** — substituir todo o conteúdo inventado pelo conteúdo do PDF anexado, capítulo por capítulo e aula por aula:
 
-| # | Capítulo | Aulas |
-|---|---|---|
-| 1 | Introdução | 12 |
-| 2 | Infraestrutura própria para o n8n | 25 |
-| 3 | Integração com APIs e requisições HTTP no n8n | 11 |
-| 4 | Webhooks no n8n | 8 |
-| 5 | API de WhatsApp | 10 |
-| 6 | Engenharia de Prompt | 12 |
-| 7 | Agentes de IA no n8n | 21 |
-| 8 | Banco de dados Redis | 12 |
-| 9 | Agente com base vetorial — RAG no n8n | 9 |
-| 10 | Multiagentes com n8n | 12 |
-| 11 | Agente n8n para agendamentos | 9 |
-| 12 | MCP no n8n | 10 |
+| #   | Capítulo                                      | Aulas |
+| --- | --------------------------------------------- | ----- |
+| 1   | Introdução                                    | 12    |
+| 2   | Infraestrutura própria para o n8n             | 25    |
+| 3   | Integração com APIs e requisições HTTP no n8n | 11    |
+| 4   | Webhooks no n8n                               | 8     |
+| 5   | API de WhatsApp                               | 10    |
+| 6   | Engenharia de Prompt                          | 12    |
+| 7   | Agentes de IA no n8n                          | 21    |
+| 8   | Banco de dados Redis                          | 12    |
+| 9   | Agente com base vetorial — RAG no n8n         | 9     |
+| 10  | Multiagentes com n8n                          | 12    |
+| 11  | Agente n8n para agendamentos                  | 9     |
+| 12  | MCP no n8n                                    | 10    |
 
 Total: **151 aulas**.
 

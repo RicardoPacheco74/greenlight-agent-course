@@ -78,11 +78,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Automação e Agentes de IA com n8n" },
+      { title: "Desenvolvimento com IA: Lovable + n8n + Supabase | Academia da Nuvem" },
       {
         name: "description",
         content:
-          "Curso premium de automação e criação de agentes de IA com n8n: infraestrutura própria, RAG, multiagentes e MCP.",
+          "Formação completa de desenvolvimento com IA: Lovable, n8n, Supabase, Engenharia de Prompt, RAG e 7 projetos práticos de ponta a ponta.",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Academia da Nuvem" },
@@ -91,7 +91,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         name: "google-site-verification",
         content: "vz_o2nJi9XZBAicHiiHXhpIbvlb3t_ZSftiVVLaek10",
       },
-
     ],
     scripts: [
       {
@@ -99,8 +98,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
-          name: "Curso de n8n - Academia da Nuvem",
-          url: "https://curso-n8n.academiadanuvem.cloud",
+          name: "Desenvolvimento com IA: Lovable + n8n + Supabase - Academia da Nuvem",
+          url: "https://curso-lovable.academiadanuvem.cloud",
           inLanguage: "pt-BR",
           publisher: {
             "@type": "Organization",

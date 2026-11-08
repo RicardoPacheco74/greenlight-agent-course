@@ -5,31 +5,33 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Design system definition.
+ * Design system definition — Identidade Visual Lovable
  *
- * The @theme inline block maps CSS custom properties to Tailwind utility
- * classes (e.g. --color-primary -> bg-primary, text-primary).
- *
- * The :root and .dark blocks define the actual color values using oklch.
- * All colors MUST use oklch format.
- *
- * To add a new semantic color:
- * 1. Add the variable to :root (light value) and .dark (dark value)
- * 2. Register it in @theme inline as --color-<name>: var(--<name>)
+ * Antigravity | Formação: Desenvolvimento com IA: Lovable + n8n + Supabase
  */
 
 @theme inline {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Bricolage Grotesque", "Inter", sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
-  --color-n8n: var(--n8n);
-  --color-n8n-foreground: var(--n8n-foreground);
+
+  --color-lovable-orange: var(--lovable-orange);
+  --color-lovable-pink: var(--lovable-pink);
+  --color-lovable-magenta: var(--lovable-magenta);
+  --color-lovable-purple: var(--lovable-purple);
+  --color-lovable-violet: var(--lovable-violet);
+  --color-lovable-blue: var(--lovable-blue);
+  --color-lovable-cyan: var(--lovable-cyan);
+
   --color-neon: var(--neon);
+  --color-n8n: var(--n8n);
   --color-sky: var(--sky);
   --color-ember: var(--ember);
   --color-graphite: var(--graphite);
   --color-surface: var(--surface);
   --color-surface-2: var(--surface-2);
+  --color-surface-elevated: var(--surface-elevated);
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -39,7 +41,9 @@
   --radius-4xl: calc(var(--radius) + 16px);
 
   --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
   --color-foreground: var(--foreground);
+  --color-foreground-secondary: var(--foreground-secondary);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
@@ -76,49 +80,80 @@
 :root,
 .dark {
   --radius: 1rem;
-  /* Lovable dark neon: deep black, magenta + violet, pink/blue/orange accents */
-  --background: oklch(0.1 0.025 295);
-  --foreground: oklch(0.97 0.01 320);
-  --card: oklch(0.16 0.04 295);
-  --card-foreground: oklch(0.97 0.01 320);
-  --popover: oklch(0.16 0.04 295);
-  --popover-foreground: oklch(0.97 0.01 320);
-  --primary: oklch(0.68 0.26 340);
-  --primary-foreground: oklch(0.99 0.005 320);
-  --secondary: oklch(0.22 0.05 295);
-  --secondary-foreground: oklch(0.96 0.01 320);
-  --muted: oklch(0.2 0.04 295);
-  --muted-foreground: oklch(0.72 0.03 300);
-  --accent: oklch(0.25 0.08 300);
-  --accent-foreground: oklch(0.96 0.01 320);
-  --destructive: oklch(0.62 0.22 25);
-  --destructive-foreground: oklch(0.98 0.005 320);
-  --border: oklch(0.8 0.1 310 / 14%);
-  --input: oklch(0.8 0.1 310 / 18%);
-  --ring: oklch(0.68 0.26 340);
-  /* --n8n is the legacy token name: now the violet partner color */
-  --n8n: oklch(0.58 0.25 295);
-  --n8n-foreground: oklch(0.99 0.005 320);
-  /* --neon: magenta/pink highlight */
-  --neon: oklch(0.72 0.25 345);
-  --sky: oklch(0.7 0.16 250);
-  --ember: oklch(0.74 0.18 50);
-  --graphite: oklch(0.18 0.04 295);
-  --surface: oklch(0.13 0.035 295);
-  --surface-2: oklch(0.17 0.045 295);
-  --chart-1: oklch(0.72 0.25 345);
-  --chart-2: oklch(0.58 0.25 295);
-  --chart-3: oklch(0.7 0.16 250);
-  --chart-4: oklch(0.74 0.18 50);
-  --chart-5: oklch(0.5 0.1 295);
-  --sidebar: oklch(0.13 0.035 295);
-  --sidebar-foreground: oklch(0.97 0.01 320);
-  --sidebar-primary: oklch(0.68 0.26 340);
-  --sidebar-primary-foreground: oklch(0.99 0.005 320);
-  --sidebar-accent: oklch(0.2 0.04 295);
-  --sidebar-accent-foreground: oklch(0.96 0.01 320);
-  --sidebar-border: oklch(0.8 0.1 310 / 14%);
-  --sidebar-ring: oklch(0.68 0.26 340);
+
+  /* Lovable Dark Palette */
+  --background: #05030d;
+  --background-secondary: #080511;
+
+  --surface: #0c0718;
+  --surface-2: #151027;
+  --surface-elevated: #151027;
+
+  --foreground: #f8f6ff;
+  --foreground-secondary: #c8c0d8;
+  --foreground-muted: #89819c;
+
+  --lovable-orange: #ff762e;
+  --lovable-pink: #ff4fb8;
+  --lovable-magenta: #f02bcb;
+  --lovable-purple: #922eff;
+  --lovable-violet: #6925e8;
+  --lovable-blue: #3478ff;
+  --lovable-cyan: #39e6c0;
+
+  --gradient-primary: linear-gradient(
+    110deg,
+    #ff762e 0%,
+    #ff4fb8 30%,
+    #f02bcb 50%,
+    #922eff 75%,
+    #3478ff 100%
+  );
+
+  --gradient-button: linear-gradient(110deg, #ff4fb8 0%, #d72ddb 48%, #852eff 100%);
+
+  --gradient-text: linear-gradient(100deg, #ffffff 0%, #ff85d0 35%, #c25aff 70%, #7295ff 100%);
+
+  --card: #0c0718;
+  --card-foreground: #f8f6ff;
+  --popover: #0c0718;
+  --popover-foreground: #f8f6ff;
+  --primary: #ff4fb8;
+  --primary-foreground: #ffffff;
+  --secondary: #151027;
+  --secondary-foreground: #f8f6ff;
+  --muted: #151027;
+  --muted-foreground: #89819c;
+  --accent: #20163b;
+  --accent-foreground: #f8f6ff;
+  --destructive: #ff453a;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.12);
+  --ring: #f02bcb;
+
+  /* Aliases mantidos para compatibilidade com componentes */
+  --neon: #ff4fb8;
+  --n8n: #922eff;
+  --n8n-foreground: #ffffff;
+  --sky: #3478ff;
+  --ember: #ff762e;
+  --graphite: #151027;
+
+  --chart-1: #ff4fb8;
+  --chart-2: #922eff;
+  --chart-3: #3478ff;
+  --chart-4: #ff762e;
+  --chart-5: #39e6c0;
+
+  --sidebar: #0c0718;
+  --sidebar-foreground: #f8f6ff;
+  --sidebar-primary: #ff4fb8;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #151027;
+  --sidebar-accent-foreground: #f8f6ff;
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+  --sidebar-ring: #f02bcb;
 }
 
 @layer base {
@@ -139,41 +174,52 @@
   }
 
   ::selection {
-    background-color: color-mix(in oklab, var(--neon) 30%, transparent);
+    background-color: color-mix(in srgb, var(--lovable-magenta) 40%, transparent);
+    color: #ffffff;
   }
 }
 
 @utility glass {
-  background-color: color-mix(in oklab, white 5%, transparent);
-  border: 1px solid color-mix(in oklab, white 10%, transparent);
-  backdrop-filter: blur(16px);
+  background-color: rgba(12, 7, 24, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+}
+
+@utility glass-elevated {
+  background-color: rgba(21, 16, 39, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(24px);
 }
 
 @utility glow-ring {
   box-shadow:
-    0 0 0 1px color-mix(in oklab, var(--neon) 30%, transparent),
-    0 0 40px -12px color-mix(in oklab, var(--neon) 55%, transparent);
+    0 0 0 1px rgba(240, 43, 203, 0.35),
+    0 0 45px -12px rgba(146, 46, 255, 0.45);
 }
 
 @utility text-glow {
-  text-shadow: 0 0 32px color-mix(in oklab, var(--neon) 45%, transparent);
+  text-shadow: 0 0 32px rgba(240, 43, 203, 0.55);
+}
+
+@utility text-gradient {
+  background-image: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @utility grid-bg {
   background-image:
-    linear-gradient(to right, color-mix(in oklab, white 4%, transparent) 1px, transparent 1px),
-    linear-gradient(to bottom, color-mix(in oklab, white 4%, transparent) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
   background-size: 48px 48px;
 }
 
 @utility gradient-neon {
-  background-image: linear-gradient(
-    135deg,
-    var(--ember) 0%,
-    var(--neon) 35%,
-    var(--n8n) 75%,
-    var(--sky) 100%
-  );
+  background-image: var(--gradient-button);
+}
+
+@utility gradient-primary {
+  background-image: var(--gradient-primary);
 }
 
 @utility no-scrollbar {
