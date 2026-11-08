@@ -2,22 +2,22 @@ import { Reveal, Section, SectionHeading } from "./primitives";
 
 const TOPICS = [
   {
-    title: "O que é o n8n",
-    text: "O n8n é uma plataforma de automação de workflows em que você conecta aplicativos, APIs e bancos de dados em fluxos visuais. Pode rodar na nuvem oficial ou em servidor próprio com Docker.",
+    title: "Lovable",
+    text: "O Lovable cria sites e aplicações a partir de prompts, com modos Plan e Build, histórico de versões, conectores, integração com GitHub e publicação com domínio personalizado.",
   },
   {
-    title: "Automação com inteligência artificial",
-    text: "Combinando gatilhos, webhooks e modelos de linguagem, o n8n executa tarefas repetitivas com decisão automática: triagem de mensagens, respostas no WhatsApp, geração de relatórios e integração com APIs.",
+    title: "Lovable Cloud e Supabase",
+    text: "A camada de dados das aplicações: tabelas, comandos SQL, segurança com RLS, Edge Functions para lógica no backend, autenticação e armazenamento.",
   },
   {
-    title: "Agentes de IA, RAG e MCP",
-    text: "Agentes de IA usam memória e ferramentas para agir por conta própria. Com RAG, o agente consulta sua própria base de conhecimento em PostgreSQL/Supabase; com MCP e multiagentes, vários especialistas dividem tarefas dentro do mesmo fluxo.",
+    title: "n8n e inteligência artificial",
+    text: "O n8n recebe dados do Lovable por webhooks e executa fluxos com agentes de IA da OpenAI e base vetorial no Supabase, como no projeto ValidaLegal.",
   },
 ];
 
 export function SeoContext() {
   return (
-    <Section id="sobre-n8n" className="pb-16">
+    <Section id="conceitos" className="pb-16">
       <SectionHeading eyebrow="Contexto" title="Entenda os conceitos do curso" />
       <Reveal delay={0.05} className="mt-10">
         <div className="grid gap-4 md:grid-cols-3">

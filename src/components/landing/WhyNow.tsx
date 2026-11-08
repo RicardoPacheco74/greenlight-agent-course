@@ -1,51 +1,51 @@
-import { BriefcaseBusiness, LineChart, TrendingUp, Users } from "lucide-react";
+import { Database, Layout, Rocket, Workflow } from "lucide-react";
 
 import { GlassCard, Reveal, Section, SectionHeading } from "./primitives";
 
-const STATS = [
+const PILLARS = [
   {
-    icon: TrendingUp,
-    value: "78%",
-    label: "das empresas já usam IA em pelo menos uma função",
-    bar: 78,
+    icon: Layout,
+    value: "Interfaces",
+    label: "Prototipe e crie sites, landing pages e aplicações descrevendo o que você quer.",
+    bar: 25,
   },
   {
-    icon: BriefcaseBusiness,
-    value: "3,4x",
-    label: "crescimento das vagas ligadas a automação e agentes",
-    bar: 68,
+    icon: Database,
+    value: "Dados",
+    label: "Conecte banco de dados com Lovable Cloud e Supabase, com segurança via RLS.",
+    bar: 50,
   },
   {
-    icon: LineChart,
-    value: "R$ 8k–25k",
-    label: "faixa comum de projetos de automação sob demanda",
-    bar: 84,
+    icon: Workflow,
+    value: "Automação",
+    label: "Integre APIs e fluxos do n8n por webhooks, com agentes de IA.",
+    bar: 75,
   },
   {
-    icon: Users,
-    value: "+200k",
-    label: "profissionais na comunidade global de n8n",
-    bar: 56,
+    icon: Rocket,
+    value: "Publicação",
+    label: "Publique com GitHub e domínio personalizado: projetos reais no ar.",
+    bar: 100,
   },
 ];
 
-const CURVE = [12, 18, 26, 38, 55, 72, 91];
+const STAGES = ["Ideia", "Prompt", "Interface", "Dados", "Integração", "IA", "Publicação"];
 
 export function WhyNow() {
   return (
     <Section id="por-que">
       <SectionHeading
-        eyebrow="Momento de mercado"
+        eyebrow="Desenvolvimento com IA"
         title={
           <>
-            Por que aprender <span className="text-neon">n8n</span> agora?
+            Por que aprender <span className="text-neon">Lovable</span> agora?
           </>
         }
-        description="A IA deixou de ser demonstração e virou operação. Quem sabe conectar modelos, dados e canais entrega resultado — e cobra por isso."
+        description="Com desenvolvimento assistido por IA, uma ideia vira aplicação funcional: interface, banco de dados, integrações e publicação, no mesmo lugar."
       />
 
       <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-        {STATS.map((s, i) => (
+        {PILLARS.map((s, i) => (
           <Reveal key={s.value} delay={i * 0.08}>
             <GlassCard className="h-full">
               <s.icon className="h-5 w-5 text-neon" />
@@ -63,29 +63,27 @@ export function WhyNow() {
         <GlassCard interactive={false} className="p-8">
           <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
             <div className="max-w-md">
-              <p className="text-[11px] tracking-[0.18em] uppercase text-neon">Demanda por agentes</p>
+              <p className="text-[11px] tracking-[0.18em] uppercase text-neon">Da ideia ao app</p>
               <p className="mt-3 font-display text-2xl leading-snug font-light">
-                A curva de adoção está no início. Sair na frente hoje é ocupar um espaço que ainda
-                tem pouca gente qualificada.
+                O curso cobre cada etapa da construção, do primeiro prompt até a aplicação
+                publicada.
               </p>
             </div>
             <div className="flex h-40 flex-1 items-stretch gap-3">
-              {CURVE.map((h, i) => (
-                <div key={i} className="flex h-full flex-1 flex-col gap-2">
+              {STAGES.map((label, i) => (
+                <div key={label} className="flex h-full min-w-0 flex-1 flex-col gap-2">
                   <div className="flex min-h-0 flex-1 items-end">
                     <div
                       className="w-full rounded-t-md bg-gradient-to-t from-n8n to-neon opacity-90 shadow-[0_0_24px_-6px_var(--neon)] transition-all duration-700 hover:opacity-100"
-                      style={{ height: `${h}%`, minHeight: 10 }}
+                      style={{ height: `${14 + i * 14}%`, minHeight: 10 }}
                     />
                   </div>
-                  <span className="text-center font-mono text-[10px] text-muted-foreground">
-                    {2019 + i}
+                  <span className="truncate text-center font-mono text-[9px] text-muted-foreground md:text-[10px]">
+                    {label}
                   </span>
                 </div>
               ))}
             </div>
-
-
           </div>
         </GlassCard>
       </Reveal>

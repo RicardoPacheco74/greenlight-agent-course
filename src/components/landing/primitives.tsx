@@ -13,12 +13,20 @@ import {
   Server,
   Sparkles,
   Workflow,
+  Layout,
+  Palette,
+  Users,
+  BarChart3,
   type LucideIcon,
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
 const ICONS: Record<string, LucideIcon> = {
+  Layout,
+  Palette,
+  Users,
+  BarChart3,
   Bot,
   BookOpen,
   CalendarClock,

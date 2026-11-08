@@ -1,77 +1,60 @@
-import { Quote, Star } from "lucide-react";
+import { BookOpen, Code2, Database, Layers, Rocket, Workflow } from "lucide-react";
 
 import { GlassCard, Reveal, Section, SectionHeading } from "./primitives";
 
-const TESTIMONIALS = [
+const DIFFERENTIALS = [
   {
-    name: "Rafael Moura",
-    role: "Analista de TI",
-    text: "Montei meu servidor com Docker e Traefik no segundo fim de semana. Hoje rodo automações de três clientes na mesma VPS.",
-    initials: "RM",
+    icon: Rocket,
+    title: "Do zero à publicação",
+    text: "Começa na criação da conta e termina com projetos publicados, conectados ao GitHub e com domínio personalizado.",
   },
   {
-    name: "Juliana Prado",
-    role: "Dona de clínica",
-    text: "O agente de agendamento reduziu 70% das mensagens que minha secretária respondia à mão. Confirmação e lembrete são automáticos.",
-    initials: "JP",
+    icon: BookOpen,
+    title: "Engenharia de Prompt",
+    text: "LLMs, tokenização, janela de contexto, Few-Shot, Chain-of-Thought e prompts em Markdown, XML e JSON.",
   },
   {
-    name: "Diego Santini",
-    role: "Desenvolvedor",
-    text: "A parte de RAG com PgVector foi a mais clara que já vi. Entreguei um agente treinado na base do cliente em uma semana.",
-    initials: "DS",
+    icon: Layers,
+    title: "Design System",
+    text: "Tailwind CSS, shadcn/ui e como extrair o design de uma referência para remixar projetos.",
   },
   {
-    name: "Camila Reis",
-    role: "Freelancer",
-    text: "Comecei sem saber o que era webhook. Fechei meu primeiro projeto de automação por R$ 6.500 antes de terminar o curso.",
-    initials: "CR",
+    icon: Database,
+    title: "Banco de dados de verdade",
+    text: "Lovable Cloud e Supabase com SQL, RLS e Edge Functions.",
   },
   {
-    name: "Anderson Lopes",
-    role: "Gestor de operações",
-    text: "O módulo de multiagentes mudou como estruturo processos. Cada área tem seu especialista dentro de um único fluxo.",
-    initials: "AL",
+    icon: Workflow,
+    title: "Lovable + n8n",
+    text: "Webhooks, agente de validação com OpenAI e base vetorial no projeto ValidaLegal.",
   },
   {
-    name: "Marina Duarte",
-    role: "Consultora",
-    text: "MCP explicado de forma prática, com projeto rodando. Hoje reaproveito ferramentas entre agentes sem retrabalho.",
-    initials: "MD",
+    icon: Code2,
+    title: "Sete projetos completos",
+    text: "Landing page, app com API, vendas, ValidaLegal, rede social, SaaS com IA e dashboard.",
   },
 ];
 
 export function Testimonials() {
   return (
-    <Section id="depoimentos">
+    <Section id="diferenciais">
       <SectionHeading
-        eyebrow="Depoimentos"
+        eyebrow="Diferenciais"
         title={
           <>
-            Quem já está <span className="text-neon">automatizando</span>
+            O que torna esta formação <span className="text-neon">diferente</span>
           </>
         }
       />
       <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {TESTIMONIALS.map((t, i) => (
-          <Reveal key={t.name} delay={Math.min(i * 0.06, 0.3)}>
+        {DIFFERENTIALS.map((t, i) => (
+          <Reveal key={t.title} delay={Math.min(i * 0.06, 0.3)}>
             <GlassCard className="flex h-full flex-col">
-              <Quote className="h-5 w-5 text-neon/70" />
-              <p className="mt-4 flex-1 text-sm leading-relaxed text-foreground/85">{t.text}</p>
-              <div className="mt-6 flex items-center gap-3 border-t border-border pt-5">
-                <span className="flex h-10 w-10 items-center justify-center rounded-full border border-neon/25 bg-neon/10 font-mono text-xs text-neon">
-                  {t.initials}
-                </span>
-                <div className="min-w-0">
-                  <p className="truncate text-sm font-medium">{t.name}</p>
-                  <p className="truncate text-xs text-muted-foreground">{t.role}</p>
-                </div>
-                <div className="ml-auto flex gap-0.5">
-                  {Array.from({ length: 5 }).map((_, s) => (
-                    <Star key={s} className="h-3 w-3 fill-neon text-neon" />
-                  ))}
-                </div>
-              </div>
+              <span className="flex h-10 w-10 items-center justify-center rounded-full border border-neon/25 bg-neon/10 text-neon">
+                <t.icon className="h-4.5 w-4.5" />
+              </span>
+              <p className="mt-5 text-base font-medium">{t.title}</p>
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-foreground/80">{t.text}</p>
             </GlassCard>
           </Reveal>
         ))}
