@@ -96,7 +96,7 @@ export function FinalCta() {
           <img
             src={logoAcademia.url}
             alt="Academia da Nuvem"
-            className="h-9 w-auto"
+            className="h-10 w-auto md:h-11 object-contain"
             loading="lazy"
           />
         </a>

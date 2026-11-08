@@ -20,7 +20,11 @@ export function Nav() {
           rel="noopener noreferrer"
           className="flex items-center transition-opacity hover:opacity-80"
         >
-          <img src={logoAcademia.url} alt="Academia da Nuvem" className="h-8 w-auto md:h-10" />
+          <img
+            src={logoAcademia.url}
+            alt="Academia da Nuvem"
+            className="h-10 w-auto md:h-[46px] object-contain transition-transform duration-200 hover:scale-[1.02]"
+          />
         </a>
 
         <div className="glass hidden items-center rounded-full px-2 py-1 lg:flex">
