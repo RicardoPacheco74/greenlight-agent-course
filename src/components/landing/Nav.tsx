@@ -23,7 +23,7 @@ export function Nav() {
           <img
             src={logoAcademia.url}
             alt="Academia da Nuvem"
-            className="h-10 w-auto md:h-[46px] object-contain transition-transform duration-200 hover:scale-[1.02]"
+            className="h-7 w-auto md:h-8 object-contain shrink-0"
           />
         </a>
 
