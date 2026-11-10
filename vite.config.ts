@@ -12,4 +12,8 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Pin the Netlify preset so the production build emits a Netlify server
+  // function (SSR) and static assets in `dist/` instead of a Cloudflare worker.
+  // Lovable's own build environment overrides this, so the Lovable preview is unaffected.
+  nitro: { preset: "netlify" },
 });
