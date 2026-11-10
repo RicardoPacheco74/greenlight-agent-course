@@ -1,0 +1,68 @@
+# ==================================================
+# .antigravityignore / .geminiignore
+# Configuração de Ignorados para IA (Google Anti-Gravity / Gemini)
+# Propósito: Prevenir vazamento de dados sensíveis e economia de tokens.
+# ==================================================
+
+# 1. DEPENDÊNCIAS DE PACOTES (Essencial para não torrar sua cota)
+/node_modules/
+/venv/
+/.venv/
+/env/
+/.env_python/
+/vendor/
+
+# 2. ARTEFATOS DE BUILD E CÓDIGO COMPILADO
+/dist/
+/build/
+/out/
+/.next/
+/target/
+*.min.js
+*.min.css
+
+# 3. DADOS SENSÍVEIS E CREDENCIAIS (Segurança Zero Trust)
+.env
+.env.*
+*.key
+*.pem
+*.pfx
+*service-account*.json
+*secret*.json
+*.keystore
+
+# 4. LOGS E BANCOS DE DADOS LOCAIS (Ruído no contexto da IA)
+*.log
+npm-debug.log*
+yarn-debug.log*
+*.sqlite
+*.sqlite3
+*.db
+/dump/
+
+# 5. CACHES DE FRAMEWORKS E FERRAMENTAS LOCAIS
+.idea/
+.vscode/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.DS_Store
+Thumbs.db
+.angular/
+
+# 6. MÍDIA E BINÁRIOS (A IA não precisa ler binários como texto)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.webm
+*.ico
+*.svg
+*.pdf
+*.zip
+*.tar.gz
+
+# 7. DOCUMENTOS DE PROJETO NÃO RELACIONADOS AO CÓDIGO
+# (Descomente abaixo se não quiser que a IA leia requisitos antigos de negócio)
+# /docs/arquivos_antigos/
