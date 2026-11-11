@@ -1,6 +1,6 @@
 import { ArrowRight, CreditCard, Infinity as InfinityIcon, ShieldCheck } from "lucide-react";
 
-import logoAcademia from "@/assets/logo-academia-transparente.png.asset.json";
+import logoAcademia from "@/assets/logo-academia-pink.png";
 import { MODULES, OFFER, TOTAL_LESSONS_LABEL } from "@/data/course";
 import { CtaButton, Reveal, Section } from "./primitives";
 
@@ -94,7 +94,7 @@ export function FinalCta() {
           className="transition-opacity hover:opacity-80"
         >
           <img
-            src={logoAcademia.url}
+            src={logoAcademia}
             alt="Academia da Nuvem"
             className="h-10 w-auto md:h-11 object-contain"
             loading="lazy"

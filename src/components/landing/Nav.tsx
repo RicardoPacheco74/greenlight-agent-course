@@ -1,4 +1,4 @@
-import logoAcademia from "@/assets/logo-academia-transparente.png.asset.json";
+import logoAcademia from "@/assets/logo-academia-pink.png";
 import { OFFER } from "@/data/course";
 
 const LINKS = [
@@ -21,7 +21,7 @@ export function Nav() {
           className="flex items-center transition-opacity hover:opacity-80"
         >
           <img
-            src={logoAcademia.url}
+            src={logoAcademia}
             alt="Academia da Nuvem"
             className="h-7 w-auto md:h-8 object-contain shrink-0"
           />
